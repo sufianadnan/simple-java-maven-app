@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        docker {
+        any {
             image 'maven:3.8.1-adoptopenjdk-11'  // Maven Docker image with JDK 11
             args '-v /root/.m2:/root/.m2'  // Mounts the Maven repository cache
         }
